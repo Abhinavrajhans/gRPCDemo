@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gRPCClient" options="-parameters" />
+      <module name="gRPCClient.main" options="-parameters" />
+      <module name="gRPCClient.test" options="-parameters" />
+      <module name="gRPCServer" options="-parameters" />
+      <module name="gRPCServer.main" options="-parameters" />
+      <module name="gRPCServer.test" options="-parameters" />
+    </option>
+  </component>
+</project>
