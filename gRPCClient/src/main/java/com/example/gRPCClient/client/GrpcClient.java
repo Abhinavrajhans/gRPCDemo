@@ -8,7 +8,7 @@ import io.grpc.ManagedChannelBuilder;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 @Component
 public class GrpcClient {
@@ -17,9 +17,8 @@ public class GrpcClient {
     @Value("${grpc.server.port:9090}")
     private int grpcServerPort;
 
-    @Value("${grpc:serve.host:localhost}")
+    @Value("${grpc.server.host:localhost}")
     private String grpcServerHost;
-
 
     private ManagedChannel channel;
 
