@@ -21,8 +21,15 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+
 
 	//Protobuf
 	implementation 'com.google.protobuf:protobuf-java:3.25.5'
@@ -60,13 +67,16 @@ protobuf{
 }
 
 sourceSets {
-	main{
-		proto{
+	main {
+		proto {
 			srcDir 'src/main/proto'
 		}
 	}
 }
 
+processResources {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
 tasks.named('test') {
 	useJUnitPlatform()
 }
