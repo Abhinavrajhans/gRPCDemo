@@ -19,11 +19,9 @@ public class GrpcServerConfig {
     private final SampleServiceImpl sampleServicesImpl;
     private Server server;
 
-    public GrpcServerConfig() {
-        this.sampleServicesImpl = new SampleServiceImpl();
+    public GrpcServerConfig(SampleServiceImpl sampleServicesImpl) {
+        this.sampleServicesImpl = sampleServicesImpl;
     }
-
-
 
     @PostConstruct
     public void startGrpcServer() throws IOException {

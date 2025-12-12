@@ -4,8 +4,9 @@ import com.example.gRPCServer.SampleResponse;
 import com.example.gRPCServer.SampleServiceGrpc;
 
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class SampleServiceImpl extends SampleServiceGrpc.SampleServiceImplBase {
 
     @Override
